@@ -1,0 +1,66 @@
+1.Git基础
+	Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。项目的集成开发！
+	
+2.Git优点	
+	容灾能力强
+	本地的版本管理
+	异地协作开发
+	灵活分支
+
+3.Git常用命令（右键 Git Bash Here）
+	
+	git version  	(版本号)
+	git config --global user.name "username"
+	git config --global suer.email email@qq.com 	(C:\Users\admin路径下的.gitconfig文件里面可以看到
+							--global 表示全局属性，所有的git项目都会共用属性)
+	git config --list 	(查看配置文件)
+	git init	（初始化仓库）	
+	git status	（查看状态）
+	git status -s	（查看状态）
+	git diff	（查看详细过程，，冲突）
+	
+
+
+4.工作流程	
+	克隆 Git 资源作为工作目录。
+	在克隆的资源上添加或修改文件。
+	如果其他人修改了，你可以更新资源。
+	在提交前查看修改。
+	提交修改。
+	在修改完成后，如果发现错误，可以撤回提交并再次修改并提交
+
+5.提交文件
+	新建文件 ，git status 查看文件状态
+	文件添加到缓存区，git add 文件名
+	提交文件到本地库 git commit
+	编写注释，完成提交（带注释提交：git commit -m“注释内容”）
+
+6.查看历史记录
+	git log 文件名
+	git log --pretty=oneline文件名  （简易信息）
+	git reset --hard HEAD^ （回退到上一个版本 ）
+	git reset --hard HEAD~2 （往前退2个版本 ）
+	git reset --hard 版本号 （版本穿越）	
+	git checkout -- 文件名
+
+7.Git工作原理
+	工作区：在电脑里能看到的目录。
+	暂存区：stage。一般存放在 ".git目录下" 下的index文件（.git/index）中，有时也叫索引（index）。
+	版本库：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。
+
+8.分支
+	git branch（查看当前分支）
+	git branch -v（查看当前分支）
+	git branch 分支名（新增分支）
+	git checkout 分支名（切换分支）
+	git checkout master （切换到主干）
+	git merge 分支名 （合并）
+	git branch -d (分支名)  删除的时候会提示 是否删除还没被合并的分支??
+	git branch -D (分支名)  强制删除分支 不提示
+
+9.日志
+	git log
+	git log --oneline
+	git log --oneline --graph
+
+
